@@ -8,6 +8,6 @@ function mostrarAumento()
 	let importe=parseFloat(document.getElementById("txtIdImporte").value);
 	let porcentaje= 0.25*importe;
 	let descuento= importe-porcentaje;
-	document.getElementById("txtIdResultado").value= descuento;
+	document.getElementById("txtIdResultado").value= descuento.toFixed(2);
 	
 }

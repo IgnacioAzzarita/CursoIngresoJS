@@ -9,4 +9,5 @@ function mostrarAumento()
 	let porcentaje= sueldo*0.1;
 	let suma= porcentaje+sueldo;
 	document.getElementById("txtIdResultado").value=suma
+.toFixed(2);
 }
