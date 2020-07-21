@@ -1,17 +1,17 @@
 function mostrar()
 {
-	let aleatorio= Math.floor(Math.random()*10);
-	if (aleatorio>=9)
+	let nota= Math.round(Math.random()*(10-1)+1);
+	if (nota>=9)
 	{//Genero el número RANDOM entre 1 y 10 
-	alert("La nota es "+aleatorio+" EXCELENTE");
+	alert("La nota es "+nota+" EXCELENTE");
 	}
-	else if (aleatorio>4)
+	else if (nota>4)
 	{
-		alert("La nota es "+aleatorio+" APROBÓ");
+		alert("La nota es "+nota+" APROBÓ");
 	}
 	else
 	{
-		alert("La nota es "+aleatorio+" Vamos,la proxima se puede");
+		alert("La nota es "+nota+" Vamos,la proxima se puede");
 	}
 
 }//FIN DE LA FUNCIÓN
