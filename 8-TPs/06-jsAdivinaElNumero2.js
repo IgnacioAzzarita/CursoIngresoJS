@@ -9,28 +9,23 @@
 Desde  6 Intentos hasta 10:”falta técnica”
 Más de 10 intentos: “afortunado en el amor!!”.*/
 
-let numeroSecreto; 
+let numeroSecreto;
 let contadorIntentos;
-flag= 0;
+let flag;//variable bandera
 
-function comenzar()
-{
-	//Genero el número RANDOM entre 1 y 100
-  numeroSecreto = Math.round(Math.random()* 99 + 1)
-  alert("lista, pense un numero.. trata de adivinarlo");
-  flag = 1;
-  contadorIntentos = 0;
-  document.getElementById("txtIdIntentos").value = contadorIntentos;
-  document.getElementById("txtIdNumero").focus();
-  
-		//alert(numeroSecreto );
+
+function comenzar() {
 	
+numeroSecreto = Math.round(Math.random()* 99 + 1)
+alert("lista, pense un numero.. trata de adivinarlo");
+flag = 1;
+contadorIntentos = 0;
+document.getElementById("txtIdIntentos").value = contadorIntentos;
 
 }
-
-function verificar()
+function  verificar()
 {
-	let numero;
+  let numero;
   
    if(flag == 0){
      
@@ -38,15 +33,44 @@ function verificar()
 
    
    }
+
    else{numero = parseInt(document.getElementById("txtIdNumero").value);
    contadorIntentos++;
    document.getElementById("txtIdIntentos").value = contadorIntentos;
 
    if(numero == numeroSecreto) {
 
-   switch()
-    contadorIntentos = 0;
-    flag = 0;
+	switch(contadorIntentos){
+		case 1:
+			alert("Usted es un psiquico");
+			break;
+		case 2:
+			alert("Excelente percepción!");
+			break;
+		case 3:
+			alert("Esto es suerte");
+			break;
+		case 4:
+			alert("Excelente tecnica");
+			break;
+		case 5:
+			alert("Usted esta en la media");
+			break;
+		case 6:
+		case 7:
+		case 8:
+		case 9:
+		case 10:
+			alert("Falta tecnica");
+			break;
+		default:
+			alert("Afortundo en el amor...");
+
+	
+	
+	}
+	contadorIntentos = 0;
+	flag = 0;
 
    }
 
@@ -60,7 +84,8 @@ function verificar()
      alert("Le falta...");
    }
   }
-   
+
+ 
 document.getElementById("txtIdNumeros").value = "";
 document.getElementById("txtIdNumero").focus();
 }
