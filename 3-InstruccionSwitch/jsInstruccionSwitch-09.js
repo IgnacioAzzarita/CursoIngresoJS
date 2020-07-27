@@ -10,19 +10,19 @@ function mostrar() {
 				case "Bariloche":
 					plusVariable=precioBase*0.20;
 					precioFinal= precioBase+plusVariable;
-					alert("El costo por su estadía es de $"+precioFinal);
-					break;
+					
+				    break;
 				case "Mar del plata":
 					plusVariable=precioBase*0.20;
 					precioFinal=precioBase-plusVariable;
-					alert("El costo por su estadía es de $"+precioFinal);
+					
 					break;
 				case "Cordoba":
 				case "Cataratas":
 					plusVariable=precioBase*0.10;
 					precioFinal=precioBase-plusVariable;
-					alert("El costo por su estadía es de $"+precioFinal);
-					break;
+					
+				    break;
 			}
 			break;
 		case "Verano":
@@ -30,36 +30,37 @@ function mostrar() {
 				case"Bariloche":
 				plusVariable=precioBase*0.20;
 				precioFinal=precioBase-plusVariable;
-				alert("El costo por su estadía es de $"+precioFinal);
 				break;
+				
 				case "Mar del plata":
 				plusVariable=precioBase*0.20;
 				precioFinal=precioBase+plusVariable;
-				alert("El costo por su estadía es de $"+precioFinal);
+				
 				break;
 				case "Cordoba":
 				case "Cataratas":
 				plusVariable=precioBase*0.10;
-				precioFinal=precioBase-plusVariable;
-				alert("El costo por su estadía es de $"+precioFinal);
+				precioFinal=precioBase+plusVariable;
+				
 				break;
+				
 			}
 			break;
 			case"Primavera":
 			case"Otoño":
 			switch(destinoIngresado){
-				case "Bariloche":
-				case "Mar del plata":
-				case "Cataratas":
+				case "Cordoba":
+					precioFinal=precioBase;
+					
+					break;
+				default:
 				plusVariable=precioBase*0.10;
 				precioFinal=precioBase+plusVariable;
-				alert("El costo por su estadía es de $"+precioFinal);
-				break;
-				case "Cordoba":
-					alert("El costo por su estadía es de $"+precioFinal);
-					break
+			    break;
+				
 			}
 			break;
-
 			}
+			alert("El costo por su estadía es de $"+precioFinal);
+			
 		}

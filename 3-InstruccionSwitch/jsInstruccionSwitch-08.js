@@ -1,6 +1,15 @@
 function mostrar()
 {
 	let destino=document.getElementById("txtIdDestino").value;
+	/*if(destino=="Bariloche" || destino == "Cordoba"){
+	alert("Hace frío");
+}
+else{
+	alert("Hace calor");
+}
+}*/
+
+
 
 	switch(destino){
 		case "Bariloche":
@@ -13,4 +22,4 @@ function mostrar()
 			break;
 	}
 		
-}//FIN DE LA FUNCIÓN
+}//FIN DE LA FUNCIÓN*/

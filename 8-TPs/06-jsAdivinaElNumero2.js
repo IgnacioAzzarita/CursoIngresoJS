@@ -8,7 +8,6 @@
 5° intento: “usted está en la media”.
 Desde  6 Intentos hasta 10:”falta técnica”
 Más de 10 intentos: “afortunado en el amor!!”.*/
-
 let numeroSecreto;
 let contadorIntentos;
 let flag;//variable bandera
