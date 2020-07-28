@@ -7,6 +7,8 @@ function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 3
 	eleccionMaquina = Math.round(Math.random()*(3-1)+1);
+	mostrarResultado();
+	
 	 	
 
 
@@ -17,17 +19,18 @@ function piedra()
 	let piedra=1;
     if (eleccionMaquina==3){
 		alert("Ganaste");
-		contadorDeGanadas += 1;
+		contadorDeGanadas ++;
     }
     else if (piedra == eleccionMaquina) {
 		alert("Empate");
-		contadorDeEmpates += 1;
+		contadorDeEmpates ++;
     }
     else{
-		contadorDePerdidas += 1;
+		contadorDePerdidas ++;
         alert("Perdiste");
 	}
-	mostrarResultado();
+	comenzar();
+	
 	
 
 }//FIN DE LA FUNCIÓN
@@ -35,36 +38,36 @@ function papel()
 {
 	let papel=2;
     if (eleccionMaquina==1){
-		contadorDeGanadas += 1;
+		contadorDeGanadas ++;
         alert("Ganaste");
     }
     else if (papel == eleccionMaquina) {
-		contadorDeEmpates += 1;
+		contadorDeEmpates ++;
         alert("Empate");
     }
     else{
-		contadorDeEmpates += 1;
+		contadorDeEmpates ++;
         alert("Perdiste");
 	}
-	mostrarResultado();
+	comenzar();
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
 	let tijera=3;
     if (eleccionMaquina==2){
-		contadorDeGanadas += 1;
+		contadorDeGanadas ++;
         alert("Ganaste");
     }
     else if (tijera == eleccionMaquina) {
-		contadorDeEmpates += 1;
+		contadorDeEmpates ++;
         alert("Empate");
     }
     else{
-		contadorDePedidas += 1;
+		contadorDePedidas ++;
         alert("Perdiste");
 	}
-	mostrarResultado();
+	comenzar();
 	
 }//FIN DE LA FUNCIÓN
 
