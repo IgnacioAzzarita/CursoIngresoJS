@@ -11,8 +11,8 @@ do{
 	numero = parseInt(prompt("Ingrese un número: "));
 	
 	if(flag == 0){
-		numero = maximo;
-		numero = minimo;
+		maximo = numero;
+		minimo = numero;
 		flag = 1;
 	}
 	if(numero > maximo){
