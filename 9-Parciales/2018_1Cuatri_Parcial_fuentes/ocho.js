@@ -14,11 +14,12 @@ function mostrar()
     let sumaNegativo=0;
     let promedio;
     let numeroMaximo=0;
-    let numeroMinimo=0;
+    let numeroMinimo;
     let letraMaxima;
     let letraMinima;
     let flagMaximo=0;
     let flagMinimo=0;
+    let flagLetra=0;
     let seguir="si".toLowerCase();
     do{
         //tomo datos
@@ -32,12 +33,13 @@ function mostrar()
         while(datoLetra=="" || !(isNaN(datoLetra))){
         datoLetra=prompt("Valor invalido! Ingrese una letra");
         }
+        
        if(datoNumero>numeroMaximo){
            numeroMaximo=datoNumero;
            letraMaxima=datoLetra;
            flagMaximo=1
        }
-       if(datoNumero<numeroMinimo){
+       if(datoNumero<numeroMaximo){
          numeroMinimo=datoNumero;
          letraMinima=datoLetra;
          flagMinimo=1;
@@ -59,12 +61,11 @@ function mostrar()
       else{
           sumaNegativo+=datoNumero;
       }
+
        seguir=prompt("Quiere ingresar otro dato?"+" Escriba si, si asi lo quiere.");
 }while(seguir=="si");
 promedio=sumaPositivo/contadorPositivo
-if(datoLetra=undefined){
-    datoLetra="No ingreso mas de 1 letra";
-}
+
 
 console.log("La cantidad de numeros pares es "+contadorPares);
 console.log("La cantidad de numeros impares es "+contadorImpares);
